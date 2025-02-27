@@ -9,7 +9,14 @@ def get_user_info():
         "favorite_color": <user's favorite color>
     }
     """
-    pass
+
+    name = input("What is your name?")
+    age = int(input("How old are you?"))
+    favorite_color = input("What is your favourite color?")
+    return {"name": name, "age" : age, "favorite_color": favorite_color }
+dict_info = get_user_info()
+print(dict_info)
+pass
 
 # Task 2
 def calculate_bmi(weight, height):
@@ -18,7 +25,10 @@ def calculate_bmi(weight, height):
     BMI = weight (kg) / (height (m) ** 2)
     Return the BMI rounded to 2 decimal places.
     """
-    pass
+
+    bmi = weight / height ** 2
+    return int(bmi) 
+pass
 
 # Task 3
 def create_shopping_list(items):
@@ -29,7 +39,18 @@ def create_shopping_list(items):
     Input: ["apple", "banana", "apple"]
     Output: {"apple": 2, "banana": 1}
     """
-    pass
+
+    shopping_list = {}
+    for item in items:
+        if item in shopping_list:
+            shopping_list[item]= +1
+        else:
+            shopping_list[item] = 1
+        return shopping_list
+    
+items = ["apple", "banana", "apple"]
+print(create_shopping_list(items))
+pass
 
 # Task 4
 def count_word_frequency(text):
