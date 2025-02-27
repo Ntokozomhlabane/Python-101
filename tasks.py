@@ -61,7 +61,17 @@ def count_word_frequency(text):
     Input: "hello world hello"
     Output: {"hello": 2, "world": 1}
     """
-    pass
+    word = {}
+    for word in text:
+        if word in text:
+            text[word] =+ 1
+        else:
+            text[word] = 1
+            return text 
+
+
+
+pass
 
 # Task 5
 def check_number(num):
@@ -71,6 +81,15 @@ def check_number(num):
     - "Negative" if the number is less than 0.
     - "Zero" if the number is 0.
     """
+
+    if num > 0:
+        return "Positive"
+    elif num < 0:
+        return "Negative"
+    else:
+        if num == 0:
+            return "Zero"
+        
     pass
 
 # Task 6
@@ -78,6 +97,10 @@ def sum_even_numbers(numbers):
     """
     Given a list of numbers, return the sum of all even numbers.
     """
+    if numbers % 2 == 0: 
+        return sum(numbers)
+    else:
+        print("I will not return sum of numbers because they are uneven!")
     pass
 
 # Task 7
@@ -86,7 +109,12 @@ def find_first_negative(numbers):
     Given a list of numbers, use a while loop to find the first negative number.
     Return the first negative number or None if there are no negative numbers.
     """
-    pass
+    numbers = 0
+    while numbers < 0:
+        return numbers
+    else:
+        return None
+pass
 
 # Task 8
 def analyze_text(text):
@@ -99,4 +127,6 @@ def analyze_text(text):
     Input: "Hello world"
     Output: {"word_count": 2, "vowel_count": 3}
     """
+
+    
     pass
